@@ -24,11 +24,17 @@ namespace ASPNET_CORE_CRUD_APP.Pages
                 {
                     while (reader.Read())
                     {
-                        Client client = new Client(
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1).ToString(),
-                            reader.GetString(2).ToString(),
-                            reader.GetString(3).ToString());
+                        //Client client = new Client(
+                        //    reader.GetInt32(0).ToString(),
+                        //    reader.GetString(1).ToString(),
+                        //    reader.GetString(2).ToString(),
+                        //    reader.GetString(3).ToString());
+                        Client client = new Client();
+                        client.ClientID = reader.GetInt32(0).ToString();
+                        client.Name = reader.GetString(1).ToString();
+                        client.Email = reader.GetString(2).ToString();
+                        client.Phone = reader.GetString(3).ToString();
+
                         Client.Add(client);
                     }                
                 
