@@ -1,0 +1,38 @@
+﻿@page
+@model ASPNET_CORE_CRUD_APP.Pages.ClientsModel
+@{
+}
+<br>
+<h2>Clients</h2>
+
+<button type="button" class="btn btn-primary" href="/Data/Create">Add New</button>
+
+<hr />
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ClientID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Options</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model.Client)
+        {
+            <tr>
+                <td>@client.ClientID</td>
+                <td>@client.Name</td>
+                <td>@client.Email</td>
+                <td>@client.Phone</td>
+                <td>
+                    <button type="button" class="btn btn-primary" href="/Data/EditClient?id=@client.ClientID">Edit</button>
+                    <button type="button" class="btn btn-danger" href="/Data/DeleteClient?id=@client.ClientID">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
