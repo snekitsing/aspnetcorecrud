@@ -6,5 +6,33 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    <p>This is a web application to demonstrate Create, Read, Update & Delete (CRUD) operations to a local SQL Database.</p>
+    <br>
+</div>
+<div>
+    <ul>
+        <li>
+            <label>The Clients page shows a list of Clients from the SQL Table App.Clients.</label>
+            <p>On the Clients page, rows are mapped to a Client object and displayed as a table on the Razor Page.</p>
+            <hr />
+        </li>
+        <li>
+            <label>The Create page allows for creating of a new client record in the database.</label>
+            <p>The INSERT SQL command is used to add a new record.</p>
+            <hr />
+        </li>
+        <li>
+            <label>The Client Edit page shows a single record of a Client.</label>
+            <p>The client id is passed as a url parameter, and used to query the database for the client record. A client object is instantiated and data displayed on the Razor page.</p>
+            <hr />
+        </li>
+        <li>
+            <label>The Delete page deletes a record from the database.</label>
+            <p>The Delete page is called but not displayed. Its onGet() method is called to execute a DELETE SQL statement againsts the client id, which is passed as a url parameter.</p>
+        </li>
+    </ul>
+    <br />
+</div>
+<div class="text-center">
     <p>A basic CRUD Web Application developed using ASP.NET Core - By Sing Nekitsing.</p>
 </div>
